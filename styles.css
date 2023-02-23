@@ -1,8 +1,28 @@
-.home {
-    background: url("home_bg.jpg") no-repeat scroll;
+body.index {
+    background-image: url("matrix-code.gif");
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
+a.index {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+div.index {
+    vertical-align: middle;
+}
+
+body.home {
+    background-image: url("home_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 p.home {
     color: #FFFFFF;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
