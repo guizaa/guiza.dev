@@ -1,0 +1,8 @@
+.home {
+    background: url("home_bg.jpg") no-repeat scroll;
+}
+
+p.home {
+    color: #FFFFFF;
+    text-align: center;
+}
