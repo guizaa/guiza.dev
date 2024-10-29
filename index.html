@@ -6,11 +6,55 @@ permalink: /
 
 <body class="bg">
 <div class="centered">
-    <div class="index">
-        <h1 id="sug">Santiago Uribe Guiza</h1>
-        <a class="index_link" href="{{ "home" | prepend: site.baseurl }}">Home</a>
-        <br>
-        <a class="index_link" href="{{ "blog" | prepend: site.baseurl }}">Blog</a>
+    <div id="index_div" class="bg-img white-border">
+		<div id="index_text">	
+				<h1 id="sug">Santiago Uribe Guiza</h1>
+				<a id="home" class="index_link" href="#home">Home</a>
+		</div>
     </div>
 </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+	function home_transition() {
+		let idiv = $("#index_div");
+
+		idiv.css("transition", 
+			"width 1.25s ease, height 1.25s ease, filter 1s");
+		idiv.addClass('fullscreen');				
+		idiv.css("border", "none");
+		$("#index_text").css("opacity", "0");
+		
+		setTimeout(function() {
+			$("#index_text").css("display", "none");
+			idiv.css("filter", "grayscale(100%) brightness(70%) contrast(200%) blur(20px)");
+		}, 500);
+	}	
+	
+	let homeColorState = 1;
+	setInterval(function () {
+		if (homeColorState === 0) {
+			$("#home").css("color", "white");
+			homeColorState = 1;
+		}
+		else {
+			$("#home").css("color", "#B8E9FF");
+			homeColorState = 0;
+		}	
+	}, 750);
+
+	$("#home").click(home_transition);	
+	
+	$(window).on('hashchange', function () {
+		let hash = window.location.hash;
+		console.log(hash);
+
+		if (!hash) {
+			window.location.href = "";
+		}
+		else if (hash === "#home") {
+			home_transition();
+		}
+	});
+
+</script>
