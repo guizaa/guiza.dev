@@ -86,3 +86,83 @@ body.bg {
 #index_text {
 	transition: opacity 0.5s;
 }
+
+@font-face {
+	font-family: 'neomatrix';
+	src: url('/NeomatrixCode.ttf') format('truetype');
+}
+
+.horiz-cent {
+	display: flex;
+	justify-content: center;
+}
+
+#content {
+	padding-top: 40px;
+	opacity: 0;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	align-items: flex-start;
+	transition: opacity	1s;
+	width: 600px;
+	overflow-y: scroll;
+}
+
+#content * {
+	font-family: 'neomatrix';
+	color: white;
+}
+
+.neo {
+	font-family: 'neomatrix';
+}
+
+h1 {
+	font-size: 50px;
+}
+
+#terminal {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 20vh;
+    background-color: #000;
+    border-radius: 9px;
+	display: flex;
+    flex-direction: column;
+}
+
+#terminal * {
+	text-align: left;
+    font-family: monospace;
+}
+
+#output {
+	white-space: pre;
+	padding: 10px;
+	flex-grow: 1;
+    overflow-y: auto;
+}
+
+#input-container {
+	margin-top: 5px;
+    display: flex;
+    align-items: center;
+	position: relative;
+}
+
+#input {
+    background-color: #000;
+    color: #00ff00;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+	position: relative;
+	z-index: 1;
+}
+
+#links {
+	margin-bottom: 15px;
+}

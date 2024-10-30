@@ -13,48 +13,22 @@ permalink: /
 		</div>
     </div>
 </div>
+<div class="horiz-cent">
+<div id="content"> 
+	<h1>santiago uribe guiza</h1>	
+	<p>hi! My name is Santiago and I am a Software Engineer with interests in Systems Engineering, Cybersecurity, Software Development and IoT Engineering. In my free time, I am a photographer, musician and electronics hobbyist.</p>
+	<p>Contact me!<br>guiza@umich.edu</p>
+	<br>
+	<div id="links">
+		<a href="/Santiago-Uribe-Guiza-Resume.pdf" target="_blank">&lt;Resume&gt;</a>	
+		<a href="https://github.com/guizaa" target="_blank">&lt;Github&gt;</a>	
+		<a href="https://www.linkedin.com/in/santiago-uribe-guiza-62b501235/" target="_blank">&lt;LinkedIn&gt;</a>	
+		<a href="https://www.linkedin.com/in/santiago-uribe-guiza-62b501235/" target="_blank">&lt;LinkedIn&gt;</a>	
+	</div>
+	<div id="terminal"><div id="output"><div id="prompt-line"><span id="prompt">guest@guiza.dev:~$ </span><input type="text" id="input"></input></div></div>
+    <script src="term.js"></script>
+</div>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script>
-	function home_transition() {
-		let idiv = $("#index_div");
-
-		idiv.css("transition", 
-			"width 1.25s ease, height 1.25s ease, filter 1s");
-		idiv.addClass('fullscreen');				
-		idiv.css("border", "none");
-		$("#index_text").css("opacity", "0");
-		
-		setTimeout(function() {
-			$("#index_text").css("display", "none");
-			idiv.css("filter", "grayscale(100%) brightness(70%) contrast(200%) blur(20px)");
-		}, 500);
-	}	
-	
-	let homeColorState = 1;
-	setInterval(function () {
-		if (homeColorState === 0) {
-			$("#home").css("color", "white");
-			homeColorState = 1;
-		}
-		else {
-			$("#home").css("color", "#B8E9FF");
-			homeColorState = 0;
-		}	
-	}, 750);
-
-	$("#home").click(home_transition);	
-	
-	$(window).on('hashchange', function () {
-		let hash = window.location.hash;
-		console.log(hash);
-
-		if (!hash) {
-			window.location.href = "";
-		}
-		else if (hash === "#home") {
-			home_transition();
-		}
-	});
-
-</script>
+<script src="index.js"></script>
