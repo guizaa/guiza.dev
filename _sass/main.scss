@@ -108,6 +108,12 @@ body.bg {
 	transition: opacity	1s;
 	width: 600px;
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+ 	scrollbar-width: none; /* Firefox */
+}
+
+#content::-webkit-scrollbar {
+	display: none;
 }
 
 #content * {
@@ -140,9 +146,16 @@ h1 {
 }
 
 #output {
+	overflow-y: auto;
 	white-space: pre;
 	padding: 10px;
 	flex-grow: 1;
+	-webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+ 	scrollbar-width: none; /* Firefox */
+}
+
+#output::-webkit-scrollbar {
+	display: none;
 }
 
 #input-container {
