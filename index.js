@@ -15,6 +15,7 @@ setTimeout(function() {
 setTimeout(function() {
 	$("#content").css("visibility", "visible");
 	$("#content").css("opacity", "1");
+	$("#content").animate({scrollTop: 0}, 1000);
 	$("#input").focus();
 }, 1000);
 
