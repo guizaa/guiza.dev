@@ -196,3 +196,40 @@ h1 {
 	margin-bottom: 15px;
 }
 
+// food-blog-2
+
+.white-text, .white-text *{
+	font-family: Georgia, sans-serif !important;
+	color: white;
+	width: 100%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+#text {
+	letter-spacing: +0.5px;	
+	line-height: 2;
+}
+
+#text img {
+	width: 50%;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.final-imgs {
+	width: 100%;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.final-imgs img {
+	width: 40%;
+}
+
+
+
