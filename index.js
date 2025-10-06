@@ -1,5 +1,6 @@
 function home_transition() {
 let idiv = $("#index_div");
+let mainContent = $("#content")
 
 idiv.css("transition", 
 	"width 1.25s ease, height 1.25s ease, filter 1s");
@@ -13,36 +14,36 @@ setTimeout(function() {
 }, 500);
 
 setTimeout(function() {
-	$("#content").css("visibility", "visible");
-	$("#content").css("opacity", "1");
-	$("#content").animate({scrollTop: 0}, 1000);
+	mainContent.removeClass("invisible");
+//	mainContent.animate({scrollTop: 0}, 1000);
 	$("#input").focus();
 }, 1000);
 
 }	
 
+let home = $("#home");
 let homeColorState = 1;
 setInterval(function () {
-if (homeColorState === 0) {
-	$("#home").css("color", "white");
-	homeColorState = 1;
-}
-else {
-	$("#home").css("color", "#B8E9FF");
-	homeColorState = 0;
-}	
+	if (homeColorState === 0) {
+		home.css("color", "white");
+		homeColorState = 1;
+	}
+	else {
+		home.css("color", "#B8E9FF");
+		homeColorState = 0;
+	}	
 }, 750);
 
 $("#home").click(home_transition);	
 
 $(window).on('hashchange', function () {
-let hash = window.location.hash;
-console.log(hash);
+	let hash = window.location.hash;
+	console.log(hash);
 
-if (!hash) {
-	window.location.href = "";
-}
-else if (hash === "#home") {
-	home_transition();
+	if (!hash) {
+		window.location.href = "";
+	}
+	else if (hash === "#home") {
+		home_transition();
 }
 });

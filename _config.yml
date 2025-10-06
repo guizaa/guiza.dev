@@ -1,0 +1,11 @@
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+collections:
+  ctfs:
+    output: true
+    permalink: /ctfs/:path/
+  writeups:
+    output: true
+    permalink: /writeups/:path/
