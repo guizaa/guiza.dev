@@ -5,6 +5,7 @@
 <body>
 <div class="horiz-cent">
 <div id="writeup-content"> 
+<h1>{{ page.title | downcase }} {% for tag in page.tags %}<span class="category-tag">{{ tag }}</span>{% endfor %}</h1>
 {{ content }}
 </div>
 </div>

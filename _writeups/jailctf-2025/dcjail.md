@@ -3,7 +3,6 @@ layout: writeup
 parent: JailCTF 2025
 tags: ["misc"]
 ---
-<h1>{{ page.title | downcase }} {% for tag in page.tags %}<span class="category-tag">{{ tag }}</span>{% endfor %}</h1>
 ```
 a "desk calculator" ... using "reverse polish notation" ... yeah this was not on my bucket list for year
 ```

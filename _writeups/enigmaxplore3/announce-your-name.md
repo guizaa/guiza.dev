@@ -3,8 +3,6 @@ layout: writeup
 parent: "EnigmaXplore 3.0"
 tags: ["web", "ssti"]
 ---
-<h1>{{ page.title | downcase }} {% for tag in page.tags %}<span class="category-tag">{{ tag }}</span>{% endfor %}</h1>
-
 ```
 Whispers echo in hollow chambers, yet the gatekeeper steals your voice. To speak the hidden truth, you must first silence the thief in your own house. The language of walls awaits those who can rebuild what was broken— piece by piece, the modular secret reveals what sleeps in the server's shadow.
 ```
